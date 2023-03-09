@@ -1,0 +1,162 @@
+
+
+.active {
+    color: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+}
+
+.bg-active {
+    background-color: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+}
+
+.error {
+    color: hsl(0, 100%, 66%);
+}
+
+.white {
+    color: hsl(0, 0%, 100%);
+}
+
+.light {
+    color: hsl(270, 3%, 87%);
+}
+
+.dark {
+    color: hsl(279, 6%, 55%);
+}
+
+.darker {
+    color: hsl(278, 68%, 11%);
+}
+
+.d-flex {
+    display: flex;
+}
+
+.container {
+    margin: 0;
+}
+
+.cards-image-section {
+    width: 30%;
+    height: 100vh;
+    display: grid;
+    margin: 0;
+    background-image: url("/Users/francislewis/Desktop/Lewis/Challenges/interactive-card-detail-form/interactive-card-detail-form/src/assets/images/bg-main-desktop.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.front-card {
+    width: 500px;
+    height: 200px;
+    padding: 30px;
+    background-image: url("/Users/francislewis/Desktop/Lewis/Challenges/interactive-card-detail-form/interactive-card-detail-form/src/assets/images/bg-card-front.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-self:self-end;
+    margin-bottom: 30px;
+    margin-left: 45%;
+}
+
+.logo {
+    padding-bottom: 70px;
+}
+
+.logo img {
+    width: 80px;
+}
+
+.section2 {
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+.customer-name {
+    width: 70%;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    align-self: center;
+}
+
+.back-card {
+    width: 550px;
+    height: 250px;
+    display: grid;
+    background-image: url("/Users/francislewis/Desktop/Lewis/Challenges/interactive-card-detail-form/interactive-card-detail-form/src/assets/images/bg-card-back.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-self: start;
+    margin-left: 65%;
+}
+
+.back-card div {
+    margin-left: auto;
+    margin-bottom: 5px;
+    margin-right: 150px;
+    align-self: center;
+}
+
+.credit-form {
+    width: 70%;
+    height: 100vh;
+    display: grid;
+}
+
+.credit-form form {
+    width: 350px;
+    padding: 50px;
+    margin: auto;
+    align-self: center;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.expiration, .cvc {
+    width: 50%;
+}
+
+.expiration div {
+    display: flex;
+}
+
+label {
+    margin-left: 5px;
+    font-size: 12px;
+    color: hsl(278, 68%, 11%);
+    font-weight: 900;
+}
+
+.form-input {
+    border-radius: 5px;
+    height: 30px;
+    border: 1px solid hsl(270, 3%, 87%);
+    margin: 5px 5px 10px;
+}
+
+.submit-button {
+    width: 102%;
+    height: 40px;
+    background-color: hsl(278, 68%, 11%);
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0px 10px 5px;
+}
