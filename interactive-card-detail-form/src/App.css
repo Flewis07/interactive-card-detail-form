@@ -55,7 +55,7 @@
     background-repeat: no-repeat;
     align-self:self-end;
     margin-bottom: 30px;
-    margin-left: 45%;
+    margin-left: 150px;
 }
 
 .logo {
@@ -87,7 +87,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     align-self: start;
-    margin-left: 65%;
+    margin-left: 250px;
 }
 
 .back-card div {
@@ -136,6 +136,10 @@
     display: flex;
 }
 
+.label-input {
+    margin: 10px 0px;
+}
+
 label {
     margin-left: 5px;
     font-size: 12px;
@@ -145,7 +149,7 @@ label {
 
 .form-input {
     border-radius: 5px;
-    height: 30px;
+    height: 40px;
     border: 1px solid hsl(270, 3%, 87%);
     margin: 5px 5px 10px;
 }
@@ -155,7 +159,7 @@ label {
     height: 40px;
     background-color: hsl(278, 68%, 11%);
     color: #ffffff;
-    font-size: 14px;
+    font-size: 18px;
     border: none;
     border-radius: 5px;
     margin: 10px 0px 10px 5px;
