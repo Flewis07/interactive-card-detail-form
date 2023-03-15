@@ -32,6 +32,12 @@
     display: flex;
 }
 
+@media only screen and (max-width: 1024px) {
+    .d-flex {
+        display: grid;
+    }
+}
+
 .container {
     margin: 0;
 }
@@ -41,60 +47,150 @@
     height: 100vh;
     display: grid;
     margin: 0;
-    background-image: url("/Users/francislewis/Desktop/Lewis/Challenges/interactive-card-detail-form/interactive-card-detail-form/src/assets/images/bg-main-desktop.png");
+    background-image: url("./src/assets/images/bg-main-desktop.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+@media only screen and (max-width: 1024px) {
+
+    .cards-image-section {
+        width: 100%;
+        padding: 0px 50px;
+        height: 50vh;
+        display: flex;
+    }
+}
+
 .front-card {
-    width: 500px;
+    width: 350px;
     height: 200px;
     padding: 30px;
-    background-image: url("/Users/francislewis/Desktop/Lewis/Challenges/interactive-card-detail-form/interactive-card-detail-form/src/assets/images/bg-card-front.png");
+    background-image: url("./src/assets/images/bg-card-front.png");
     background-size: contain;
     background-repeat: no-repeat;
     align-self:self-end;
-    margin-bottom: 30px;
-    margin-left: 150px;
+    margin-left: auto;
+    margin-right: -100px;
+
 }
 
+@media only screen and (max-width: 1024px) {
+
+    .front-card {
+        width: 550px;
+        height: 400px;
+        padding: 30px;
+        align-self:end;
+        margin-left: 0px;
+        margin-bottom: -215px;
+        z-index: 2;
+    }
+}
+
+
 .logo {
-    padding-bottom: 70px;
+    padding-bottom: 45px;
 }
 
 .logo img {
-    width: 80px;
+    width: 75px;
 }
 
-.section2 {
-    padding-bottom: 20px;
-    font-size: 30px;
+@media only screen and (max-width: 1024px) {
+
+    .logo {
+        padding-bottom: 100px;
+    }
+
+    .logo img {
+        width: 125px;
+    }
+}
+
+.card-number {
+    width: 350px;
+    padding-bottom: 2vh;
+    font-size: 23px;
+    letter-spacing: 4px;
 }
 
 .customer-name {
-    width: 70%;
-    font-size: 14px;
-    font-weight: 800;
+    width: 90%;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: normal;
     text-transform: uppercase;
     align-self: center;
 }
 
+.expiration-date {
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .card-number {
+        width: 90%;
+        padding-bottom: 20px;
+        font-size: 38px;
+    }
+
+    .section3 {
+        display: flex!important;
+    }
+
+    .customer-name {
+        font-size: 18px;
+    }
+
+    .expiration-date {
+        font-size: 18px;
+    }
+
+
+}
+
 .back-card {
-    width: 550px;
-    height: 250px;
+    width: 400px;
+    height: 300px;
     display: grid;
-    background-image: url("/Users/francislewis/Desktop/Lewis/Challenges/interactive-card-detail-form/interactive-card-detail-form/src/assets/images/bg-card-back.png");
+    background-image: url("./src/assets/images/bg-card-back.png");
     background-size: contain;
     background-repeat: no-repeat;
     align-self: start;
-    margin-left: 250px;
+    margin-left: auto;
+    margin-right: -150px;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .back-card {
+        width: 600px;
+        height: 400px;
+        align-self: center;
+        margin-top: -20px;
+        margin-left: -300px;
+        margin-right: 0px;
+    }
 }
 
 .back-card div {
     margin-left: auto;
-    margin-bottom: 5px;
-    margin-right: 150px;
+    margin-bottom: 85px;
+    margin-right: 50px;
     align-self: center;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .back-card div {
+        margin-left: auto;
+        margin-bottom: 75px;
+        margin-right: 70px;
+        font-size: 18px;
+    }
 }
 
 .credit-form {
@@ -110,6 +206,23 @@
     align-self: center;
     text-transform: uppercase;
     font-size: 16px;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .credit-form {
+        width: 100%;
+        height: auto;
+        display: grid;
+        padding: 150px 0px;
+    }
+
+    .credit-form form {
+        width: 90%;
+        padding: 50px;
+        margin: auto;
+    }
+
 }
 
 .w-100 {
@@ -140,6 +253,28 @@
     margin: 10px 0px;
 }
 
+@media only screen and (max-width: 1024px) {
+
+    .label-input label {
+        font-size: 30px;
+    }
+
+    .label-input input {
+        width: 95%;
+        height: 70px;
+        font-size: 30px;
+    }
+
+    .expirationcvc {
+        display: flex!important;
+    }
+
+    .expiration, .cvc {
+        width: 48.7%!important;
+    }
+
+}
+
 label {
     margin-left: 5px;
     font-size: 12px;
@@ -152,10 +287,15 @@ label {
     height: 40px;
     border: 1px solid hsl(270, 3%, 87%);
     margin: 5px 5px 10px;
+    padding: 0px 10px;
+}
+
+::placeholder {
+    color: hsl(279, 6%, 55%);
 }
 
 .submit-button {
-    width: 102%;
+    width: 343px;
     height: 40px;
     background-color: hsl(278, 68%, 11%);
     color: #ffffff;
@@ -163,4 +303,21 @@ label {
     border: none;
     border-radius: 5px;
     margin: 10px 0px 10px 5px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .submit-button {
+        width: 97.5%;
+        height: 80px;
+        font-size: 32px;
+        border-radius: 10px;
+    }
+}
+
+.full-width-input {
+    width: 320px;
+}
+
+.half-width-input {
+    width: 160px;
 }
