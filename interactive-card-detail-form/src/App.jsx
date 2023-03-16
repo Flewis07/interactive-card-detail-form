@@ -3,11 +3,13 @@ import CreditForm from './components/CreditForm'
 import Cards from './components/Cards'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+
   const [name, setName] = useState("Jane Appleseed");
   const [cardNumber, setCardNumber] = useState("0000 0000 0000 0000");
   const [month, setMonth] = useState("00");
+  const [year, setYear] = useState("00");
+  const [cvc, setCvc] = useState("000");
 
   return (
     <div className='container d-flex'>
@@ -15,14 +17,16 @@ function App() {
         name={name}
         cardNumber={cardNumber}
         month={month}
+        year={year}
+        cvc={cvc}
       />
       <CreditForm 
         newName={(newName) => setName(newName)}
         newCardNumber={(newCardNumber) => setCardNumber(newCardNumber)}
         newMonth={(newMonth) => setMonth(newMonth)}
+        newYear={(newYear) => setYear(newYear)}
+        newCvc={(newCvc) => setCvc(newCvc)}
       />
     </div>
   )
 }
-
-export default App

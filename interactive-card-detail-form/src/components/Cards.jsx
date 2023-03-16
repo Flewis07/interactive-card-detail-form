@@ -8,14 +8,28 @@ export default function Cards(props) {
             <div className='logo'>
               <img src={logo} alt="logo" />
             </div>
-            <div className='card-number'>{props.cardNumber}</div>
+            {
+              props.cardNumber === "" ? <div className='card-number'>0000 0000 0000 0000</div> : <div className='card-number'>{props.cardNumber}</div>
+            }
             <div className='d-flex section3'>
-              <div className='customer-name'>{props.name}</div>
-              <div className='expiration-date'>{props.month}/00</div>
+              {
+                props.name === "" ? <div className='customer-name'>Jane Appleseed</div> : <div className='customer-name'>{props.name}</div>
+              }
+              <div className='expiration-date d-flex'>
+                {
+                  props.month === "" ? <div>00</div> : <div>{props.month}</div>
+                }
+                /
+                {
+                  props.year === "" ? <div>00</div> : <div>{props.year}</div>
+                }
+              </div>
             </div>
           </div>
           <div className='back-card white'>
-            <div>000</div>
+            {
+              props.cvc === "" ? <div>000</div> : <div>{props.cvc}</div>
+            }
           </div>
       </div>
     )
