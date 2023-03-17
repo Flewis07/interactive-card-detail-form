@@ -1,4 +1,6 @@
-
+#root {
+    width: 100%;
+}
 
 .active {
     color: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
@@ -34,7 +36,7 @@
 
 @media only screen and (max-width: 1024px) {
     .d-flex {
-        display: grid;
+        flex-wrap: wrap;
     }
 }
 
@@ -199,7 +201,7 @@
     display: grid;
 }
 
-.credit-form form {
+.credit-form form, .message-container {
     width: 350px;
     padding: 50px;
     margin: auto;
@@ -208,9 +210,27 @@
     font-size: 16px;
 }
 
+.message-container {
+    text-align: center;
+}
+
+.message-container h2 {
+    font-weight: 900!important;
+    letter-spacing: 6px;
+}
+
+.message-container p {
+    text-transform: none;
+    margin-bottom: 40px;
+}
+
+.message-container button {
+    font-size: 16px;
+}
+
 @media only screen and (max-width: 1024px) {
 
-    .credit-form {
+.credit-form, .message-container {
         width: 100%;
         height: auto;
         display: grid;
@@ -303,6 +323,13 @@ label {
     border: none;
     border-radius: 5px;
     margin: 10px 0px 10px 5px;
+}
+
+.submit-button:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: hsl(278, 68%, 11%);
+    border: 1px solid hsl(278, 68%, 11%);
 }
 
 @media only screen and (max-width: 1024px) {

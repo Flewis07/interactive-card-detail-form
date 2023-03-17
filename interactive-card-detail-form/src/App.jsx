@@ -1,6 +1,7 @@
-import { useState } from 'react'
-import CreditForm from './components/CreditForm'
-import Cards from './components/Cards'
+import { useState } from 'react';
+import CreditForm from './components/CreditForm';
+import Cards from './components/Cards';
+import Message from './components/Message';
 import './App.css'
 
 export default function App() {
@@ -10,6 +11,11 @@ export default function App() {
   const [month, setMonth] = useState("00");
   const [year, setYear] = useState("00");
   const [cvc, setCvc] = useState("000");
+  const [submited, setSubmited] = useState(false);
+
+  const handleSubmit = () => {
+    setSubmited(!submited);
+  }
 
   return (
     <div className='container d-flex'>
@@ -20,13 +26,25 @@ export default function App() {
         year={year}
         cvc={cvc}
       />
-      <CreditForm 
-        newName={(newName) => setName(newName)}
-        newCardNumber={(newCardNumber) => setCardNumber(newCardNumber)}
-        newMonth={(newMonth) => setMonth(newMonth)}
-        newYear={(newYear) => setYear(newYear)}
-        newCvc={(newCvc) => setCvc(newCvc)}
-      />
+      {
+      !submited ?
+        <CreditForm 
+          newName={(newName) => setName(newName)}
+          newCardNumber={(newCardNumber) => setCardNumber(newCardNumber)}
+          newMonth={(newMonth) => setMonth(newMonth)}
+          newYear={(newYear) => setYear(newYear)}
+          newCvc={(newCvc) => setCvc(newCvc)}
+          submit={handleSubmit}
+          btnText="Submit"
+        />
+        :
+        <Message
+          title="Thank you!"
+          text="We've added your card detail"
+          btnText="Continue"
+          continue={handleSubmit}
+        />
+      }
     </div>
   )
 }

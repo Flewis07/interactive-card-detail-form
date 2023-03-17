@@ -18,9 +18,11 @@ export default function CreditForm(props) {
     
     const updateCardNumber = (event) => {
         let newCardNumber = event.target.value;
-        let isnum = /^\d+$/.test(newCardNumber);
+        newCardNumber = newCardNumber.replace(/\D/g, '');
+        newCardNumber = newCardNumber.replace(/(\d{4})/g, '$1 ');
+        newCardNumber = newCardNumber.trim();
         if(newCardNumber.length > 0){
-            if(newCardNumber.length <= 16 && isnum){
+            if(newCardNumber.length <= 20){
                 setCardNumber(newCardNumber);
                 props.newCardNumber(newCardNumber);
             }
@@ -74,31 +76,31 @@ export default function CreditForm(props) {
 
     return(
         <div className="credit-form">
-            <form action="">
+            <form action="" onSubmit={props.submit}>
                 <div className="label-input">
                     <label htmlFor="">Cardholder name</label>
-                    <input className="w-100 form-input full-width-input" type="text" placeholder="e.g. Jane Appleseed" value={name} onChange={(event) => updateName(event)}/>
+                    <input className="w-100 form-input full-width-input" type="text" placeholder="e.g. Jane Appleseed" value={name} onChange={(event) => updateName(event)} required/>
                 </div>
                 <div className="label-input">
                     <label htmlFor="">Card number</label>
-                    <input className="w-100 form-input full-width-input" type="text" placeholder="e.g. 1234 5678 9123 0000" value={cardNumber} onChange={(event) => updateCardNumber(event)}/>
+                    <input className="w-100 form-input full-width-input" type="text" placeholder="e.g. 1234 5678 9123 0000" value={cardNumber} onChange={(event) => updateCardNumber(event)} required/>
                 </div>
                 <div className="expirationcvc d-flex">
                     <div className="expiration label-input half-width-input">
                         <label htmlFor="">Exp. Date (MM/YY)</label>
                         <div className="w-100">
-                            <input className="w-50 form-input" type="text" placeholder="MM" value={month} onChange={(event) => updateMonth(event)}/>
-                            <input className="w-50 form-input" type="text" placeholder="YY" value={year} onChange={(event) => updateYear(event)}/>
+                            <input className="w-50 form-input" type="text" placeholder="MM" value={month} onChange={(event) => updateMonth(event)} required/>
+                            <input className="w-50 form-input" type="text" placeholder="YY" value={year} onChange={(event) => updateYear(event)} required/>
                         </div>
                     </div>
                     <div className="cvc w-50 label-input">
                         <label htmlFor="">CVC</label>
                         <div>
-                            <input className="w-100 form-input half-width-input" type="text" placeholder="e.g. 123" value={cvc} onChange={(event) => updateCvc(event)}/>
+                            <input className="w-100 form-input half-width-input" type="text" placeholder="e.g. 123" value={cvc} onChange={(event) => updateCvc(event)} required/>
                         </div>
                     </div>
                 </div>
-                <button className="submit-button">Confirm</button>
+                <button className="submit-button" type="submit">{props.btnText}</button>
             </form>
         </div>
     )
