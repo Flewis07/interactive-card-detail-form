@@ -17,6 +17,15 @@ export default function App() {
     setSubmited(!submited);
   }
 
+  const handleContinue = () => {
+    setSubmited(!submited);
+    setName("");
+    setCardNumber("");
+    setMonth("");
+    setYear("");
+    setCvc("");
+  }
+
   return (
     <div className='container d-flex'>
       <Cards 
@@ -42,7 +51,7 @@ export default function App() {
           title="Thank you!"
           text="We've added your card detail"
           btnText="Continue"
-          continue={handleSubmit}
+          continue={handleContinue}
         />
       }
     </div>
