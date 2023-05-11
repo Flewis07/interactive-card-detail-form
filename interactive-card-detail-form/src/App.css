@@ -64,6 +64,13 @@
     }
 }
 
+@media only screen and (max-width: 425px) {
+
+    .cards-image-section {
+        padding-top: 50px;
+    }
+}
+
 .front-card {
     width: 350px;
     height: 200px;
@@ -80,13 +87,21 @@
 @media only screen and (max-width: 1024px) {
 
     .front-card {
-        width: 550px;
+        width: 90%;
         height: 400px;
         padding: 30px;
         align-self:end;
         margin-left: 0px;
         margin-bottom: -215px;
         z-index: 2;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    .front-card {
+        height: auto;
+        margin-bottom: 50px;
     }
 }
 
@@ -107,6 +122,17 @@
 
     .logo img {
         width: 125px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    .logo img {
+        width: 55px;
+    }
+
+    .logo {
+        padding-bottom: 35px!important;
     }
 }
 
@@ -153,6 +179,39 @@
 
 }
 
+@media only screen and (max-width: 768px) {
+    .card-number {
+        width: 90%;
+        padding-bottom: 20px;
+        font-size: 25px;
+    }
+
+    .logo {
+        padding-bottom: 50px;
+    }
+
+    .customer-name {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .card-number {
+        font-size: 14px;
+    }
+
+    .customer-name {
+        width: 75%;
+        font-size: 15px;
+    }
+
+    .expiration-date {
+        font-size: 15px;
+    }
+
+
+}
+
 .back-card {
     width: 400px;
     height: 300px;
@@ -168,11 +227,12 @@
 @media only screen and (max-width: 1024px) {
 
     .back-card {
-        width: 600px;
+        position: relative;
+        width: 100%;
         height: 400px;
         align-self: center;
         margin-top: -20px;
-        margin-left: -300px;
+        margin-left: -250px;
         margin-right: 0px;
     }
 }
@@ -189,9 +249,25 @@
 
     .back-card div {
         margin-left: auto;
-        margin-bottom: 75px;
+        margin-bottom: 60px;
         margin-right: 70px;
         font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .back-card div {
+        margin-bottom: 135px;
+        margin-right: 60px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    .back-card div {
+        margin-bottom: 235px;
+        margin-right: 40px;
     }
 }
 
@@ -245,6 +321,34 @@
 
 }
 
+@media only screen and (max-width: 425px) {
+
+    .credit-form, .message-container {
+        width: 100%;
+        height: auto;
+        display: grid;
+    }
+
+    .credit-form {
+        padding: 0px 0px;
+    }
+
+    .message-container {
+        padding: 50px 0px;
+    }
+    
+}
+
+@media only screen and (max-width: 425px) {
+    
+        .credit-form form {
+            width: initial;
+            padding: 50px;
+            margin: auto;
+        }
+    
+    }
+
 .w-100 {
     width: 100%;
 }
@@ -295,6 +399,22 @@
 
 }
 
+@media only screen and (max-width: 425px) {
+    
+    .label-input {
+        width: 100%;
+    }
+
+    .expirationcvc {
+        display: block!important;
+    }
+
+    .label-input input {
+        font-size: 20px;
+    }
+
+}
+
 label {
     margin-left: 5px;
     font-size: 12px;
@@ -334,8 +454,9 @@ label {
 
 @media only screen and (max-width: 1024px) {
     .submit-button {
-        width: 97.5%;
-        height: 80px;
+        width: fit-content;
+        padding: 10px 35px;
+        margin: auto;
         font-size: 32px;
         border-radius: 10px;
     }
@@ -347,4 +468,15 @@ label {
 
 .half-width-input {
     width: 160px;
+}
+
+.error-message {
+    color: red;
+    font-size: 11px;
+    padding: 0px 10px;
+    margin: 0px;
+}
+
+.hidden {
+    display: none;
 }

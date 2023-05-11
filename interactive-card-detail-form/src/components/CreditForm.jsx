@@ -84,6 +84,7 @@ export default function CreditForm(props) {
                 <div className="label-input">
                     <label htmlFor="">Card number</label>
                     <input className="w-100 form-input full-width-input" type="text" placeholder="e.g. 1234 5678 9123 0000" value={cardNumber} onChange={(event) => updateCardNumber(event)} required/>
+                    <p className={props.errorMsg}>Card number must have 16 digits</p>
                 </div>
                 <div className="expirationcvc d-flex">
                     <div className="expiration label-input half-width-input">

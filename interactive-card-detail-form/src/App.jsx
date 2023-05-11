@@ -12,6 +12,7 @@ export default function App() {
   const [year, setYear] = useState("00");
   const [cvc, setCvc] = useState("000");
   const [submited, setSubmited] = useState(false);
+  const [cardErrorMsg, setCardErrorMsg] = useState("error-message hidden");
 
   const handleSubmit = () => {
     setSubmited(!submited);
@@ -45,11 +46,12 @@ export default function App() {
           newCvc={(newCvc) => setCvc(newCvc)}
           submit={handleSubmit}
           btnText="Submit"
+          errorMsg={cardErrorMsg}
         />
         :
         <Message
           title="Thank you!"
-          text="We've added your card detail"
+          text="We've added your card details"
           btnText="Continue"
           continue={handleContinue}
         />
